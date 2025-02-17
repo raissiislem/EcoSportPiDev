@@ -20,6 +20,10 @@ public class Event {
         this.image = image;
     }
 
+    public Event() {
+
+    }
+
     public int getId() {
         return id;
     }

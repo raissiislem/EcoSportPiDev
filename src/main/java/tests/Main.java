@@ -1,11 +1,12 @@
 package tests;
 
-import models.Partner;
-import services.ServicePartner;
+import models.Event;
+import models.Reclamation;
+import models.User;
+import services.ServiceReclamation;
 import tools.MyDataBase;
 
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
 
 public class Main {
@@ -13,24 +14,35 @@ public class Main {
         MyDataBase md = MyDataBase.getInstance();
 
         try {
-            ServicePartner servicePartner = new ServicePartner();
-            Partner partner = new Partner(
-                    1,
-                    "islem",
-                    "raissi",
-                    "islemraissi789@gmail.Com",
-                    "islem123",
-                    new Date(),
-                    "avatar.jpg",
-                    "esprit"
+            ServiceReclamation serviceReclamation = new ServiceReclamation();
+
+            // Ajouter une réclamation
+            Event event = new Event();
+            event.setId(1); // Assurez-vous que cet ID existe dans la table Event
+
+            User user = new User();
+            user.setId(1); // Assurez-vous que cet ID existe dans la table User
+
+            Reclamation reclamation = new Reclamation(
+                    0,
+                    "Problème d'organisation",
+                    "L'événement a commencé en retard",
+                    event,
+                    user
             );
-            servicePartner.ajouter(partner);
-            servicePartner.modifier(1, "EY");
-            List<Partner> partners = servicePartner.recuperer();
-            for (Partner p : partners) {
-                System.out.println(p);
+            serviceReclamation.ajouter(reclamation);
+
+            // Modifier une réclamation
+            serviceReclamation.modifier(1, "Problème corrigé", "L'événement a été bien organisé finalement.");
+
+            // Récupérer toutes les réclamations
+            List<Reclamation> reclamations = serviceReclamation.recuperer();
+            for (Reclamation r : reclamations) {
+                System.out.println(r);
             }
-           // servicePartner.supprimer(1);
+
+            // Supprimer une réclamation
+            serviceReclamation.supprimer(1);
 
         } catch (SQLException e) {
             System.err.println("Erreur : " + e.getMessage());
