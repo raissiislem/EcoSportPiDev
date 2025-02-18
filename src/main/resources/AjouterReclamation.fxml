@@ -8,19 +8,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterReclamationController">
+<AnchorPane prefHeight="752.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjouterReclamationController">
    <children>
-      <TextField fx:id="titleTF" layoutX="177.0" layoutY="87.0" prefHeight="25.0" prefWidth="293.0" />
-      <Text layoutX="177.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titre" />
-      <TextArea fx:id="descriptionTF" layoutX="177.0" layoutY="236.0" prefHeight="99.0" prefWidth="293.0" />
-      <Text layoutX="177.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
-      <Text layoutX="177.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir un evenement" />
-      <Button layoutX="177.0" layoutY="353.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="293.0" text="Réclamer" />
-      <Text layoutX="177.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter une réclamation" wrappingWidth="268.6731719970703">
+      <TextField fx:id="titleTF" layoutX="279.0" layoutY="205.0" prefHeight="26.0" prefWidth="551.0" />
+      <Text layoutX="279.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titre" wrappingWidth="550.6731719970703" />
+      <TextArea fx:id="descriptionTF" layoutX="279.0" layoutY="354.0" prefHeight="99.0" prefWidth="551.0" />
+      <Text layoutX="279.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" wrappingWidth="550.6731719970703" />
+      <Text layoutX="279.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir un evenement" wrappingWidth="550.6731719970703" />
+      <Button layoutX="279.0" layoutY="471.0" mnemonicParsing="false" onAction="#ajouterReclamation" prefHeight="30.0" prefWidth="551.0" text="Réclamer" />
+      <Text layoutX="279.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter une réclamation" wrappingWidth="550.6731719970703">
          <font>
             <Font size="21.0" />
          </font>
       </Text>
-      <ComboBox fx:id="eventTF" layoutX="169.0" layoutY="167.0" prefHeight="26.0" prefWidth="293.0" />
+      <ComboBox fx:id="eventTF" layoutX="271.0" layoutY="285.0" prefHeight="26.0" prefWidth="551.0" />
    </children>
 </AnchorPane>
